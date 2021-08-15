@@ -29,8 +29,10 @@ export interface ILogger {
 	// openLog();
 	// closeLog();
 
-	log(logEntry: ILogEntry): Observable<unknown>;
+	// log(logEntry: ILogEntry): Observable<unknown>;
 	// Or? : log<T>(logEntry: ILogEntry): Observable<T>;
+	// Or? :
+	log(logEntry: ILogEntry): Observable<boolean>;
 }
 
 export interface ILogMessageDispatcher {

@@ -1,8 +1,11 @@
 {
 	"name": "thaw-types",
-	"version": "0.0.0",
-	"description": "Data types for Forexus",
-	"keywords": [],
+	"version": "0.0.1",
+	"description": "Data types for ThAW's projects",
+	"keywords": [
+		"types",
+		"Typescript"
+	],
 	"private": false,
 	"homepage": "https://github.com/tom-weatherhead/thaw-types#readme",
 	"repository": "github:tom-weatherhead/thaw-types",
@@ -37,14 +40,14 @@
 		"prettier-check": "prettier --check \"src/**/*.ts\"",
 		"prettier-list": "prettier --list-different \"**/*.js\"",
 		"prettier-format": "prettier --write \"src/**/*.ts\"",
-		"safe-prettier-format": "! [ -d node_modules ] || npm run prettier-format",
+		"// safe-prettier-format": "! [ -d node_modules ] || npm run prettier-format",
 		"lint": "eslint src --ext .ts",
 		"build": "tsc",
 		"rollup": "rollup --config",
 		"deploy": "eval mv $npm_package_name-$npm_package_version.tgz $(echo $npm_package_config_deploy_target_dir)/",
 		"loc": "git ls-files | grep -v package-lock.json | tr -d '\\r' | tr '\\n' '\\0' | xargs -0 wc -l",
 		"re": "npm run prettier-format && npm run clean-build-products && npm run build-and-test && npm pack && npm run deploy",
-		"f": "npm run safe-prettier-format && npm run all",
+		"f": "npm run clean && npm i && npm run re",
 		"start": "npm run all"
 	},
 	"config": {
@@ -55,15 +58,17 @@
 		"rxjs": "<7"
 	},
 	"devDependencies": {
-		"@types/eslint": "^7.2.10",
-		"@types/node": "^14",
-		"@typescript-eslint/eslint-plugin": "^4.24.0",
-		"@typescript-eslint/parser": "^4.24.0",
-		"eslint": "^7.26.0",
-		"prettier": "^2.3.0",
-		"rollup": "^2.48.0",
+		"@types/eslint": "^7.28.0",
+		"@types/node": "^16",
+		"@typescript-eslint/eslint-plugin": "^4.29.1",
+		"@typescript-eslint/parser": "^4.29.1",
+		"@typescript-eslint/typescript-estree": "^4.29.1",
+		"eslint": "^7.32.0",
+		"prettier": "^2.3.2",
+		"rollup": "^2.56.2",
 		"rollup-plugin-terser": "^7.0.2",
-		"typescript": "^4.2.4"
+		"typescript": "^4.3.5",
+		"typescript-eslint-language-service": "^4.1.5"
 	},
 	"peerDependencies": {},
 	"// The correct name is bundledDependencies": true,
