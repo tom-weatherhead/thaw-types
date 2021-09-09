@@ -6,3 +6,4 @@ export * from './data-source';
 export * from './http-client';
 export * from './http-json-client';
 export * from './logger';
+export * from './mongodb-client';
