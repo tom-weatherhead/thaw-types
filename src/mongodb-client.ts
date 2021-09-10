@@ -21,13 +21,14 @@ export interface IMongoDBCollection {
 	deleteAll(): Promise<boolean>;
 }
 
+export interface IMongoDBDatabase {
+	getCollection(collectionName: string): IMongoDBCollection;
+}
+
 // Adapted from argon-promisified-mongodb's IPromisifiedConnection:
 
 export interface IMongoDBClient {
 	connect(): Promise<IMongoDBClient>;
 	destroy(): Promise<void>;
-	getCollection(
-		databaseName: string,
-		collectionName: string
-	): IMongoDBCollection;
+	getDatabase(databaseName: string): IMongoDBDatabase;
 }
