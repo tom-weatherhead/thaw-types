@@ -1,6 +1,6 @@
 {
 	"name": "thaw-types",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Data types for ThAW's projects",
 	"keywords": [
 		"types",
@@ -38,9 +38,8 @@
 		"rebuild": "npm run clean && npm i && npm run build-and-test",
 		"build-and-test": "npm run prettier-check && npm run lint && npm run build && npm run rollup",
 		"prettier-check": "prettier --check \"src/**/*.ts\"",
-		"prettier-list": "prettier --list-different \"**/*.js\"",
+		"prettier-list": "prettier --list-different \"**/*.ts\"",
 		"prettier-format": "prettier --write \"src/**/*.ts\"",
-		"// safe-prettier-format": "! [ -d node_modules ] || npm run prettier-format",
 		"lint": "eslint src --ext .ts",
 		"build": "tsc",
 		"rollup": "rollup --config",
@@ -60,12 +59,12 @@
 	"devDependencies": {
 		"@types/eslint": "^7.28.0",
 		"@types/node": "^16",
-		"@typescript-eslint/eslint-plugin": "^4.31.2",
-		"@typescript-eslint/parser": "^4.31.2",
-		"@typescript-eslint/typescript-estree": "^4.31.2",
+		"@typescript-eslint/eslint-plugin": "^4.33.0",
+		"@typescript-eslint/parser": "^4.33.0",
+		"@typescript-eslint/typescript-estree": "^4.33.0",
 		"eslint": "^7.32.0",
 		"prettier": "^2.4.1",
-		"rollup": "^2.57.0",
+		"rollup": "^2.58.0",
 		"rollup-plugin-terser": "^7.0.2",
 		"typescript": "^4.4.3",
 		"typescript-eslint-language-service": "^4.1.5"

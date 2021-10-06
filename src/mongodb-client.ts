@@ -13,8 +13,15 @@ export interface IMongoDBCollection {
 	readOneById(id: string): Promise<unknown>;
 	readAll(): Promise<unknown[]>;
 
+	// headOneById(id: string): Promise<unknown>; // ?
+
 	// Update (CRUD part 3 of 4)
-	updateOneById(id: string, replacementData: unknown): Promise<unknown>;
+
+	// Update part 1: HTTP PUT: Replace an entire existing document
+	replaceOneById(id: string, replacementData: unknown): Promise<unknown>;
+
+	// Update part 2: HTTP PATCH: Modify an existing document (i.e. 'patch' it)
+	updateOneById(id: string, update: unknown): Promise<unknown>;
 
 	// Delete (CRUD part 4 of 4)
 	deleteOneById(id: string): Promise<boolean>;
