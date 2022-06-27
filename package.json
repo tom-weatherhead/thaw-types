@@ -1,6 +1,6 @@
 {
 	"name": "thaw-types",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Data types for ThAW's projects",
 	"keywords": [
 		"types",
@@ -54,7 +54,7 @@
 	},
 	"publishConfig": {},
 	"dependencies": {
-		"rxjs": "<7"
+		"rxjs": "^7.5.5"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.4.3",
