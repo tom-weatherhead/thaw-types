@@ -2,6 +2,7 @@
 
 export * from './errors/http-json-client';
 
+export * from './colour';
 export * from './crud';
 export * from './data-feed';
 export * from './data-source';

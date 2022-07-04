@@ -4,19 +4,15 @@
 
 export interface IImage {
 	// Image attributes: width, height, colourModel, numChannels, imageData
-	// createPixelIterator(startRow, startCol, width, height, isReader, slicesAreRows): IPixelIterator;
 
-	// or:
-	createPixelIterator(
-		options?: {
-			startRow?: number; // default is 0
-			startCol?: number; // default is 0
-			width?: number; // default is imageWidth - startCol
-			height?: number; // default is imageheight - startRow
-			isReader?: boolean; // default is true
-			slicesAreRows?: boolean; // default is true
-		} // = {}
-	): IPixelIterator;
+	createPixelIterator(options?: {
+		startRow?: number; // default is 0
+		startCol?: number; // default is 0
+		width?: number; // default is imageWidth - startCol
+		height?: number; // default is imageheight - startRow
+		isReader?: boolean; // default is true
+		slicesAreRows?: boolean; // default is true
+	}): IPixelIterator;
 
 	// or:
 	// createPixelReader(options: {...} = {}): IPixelReader;
